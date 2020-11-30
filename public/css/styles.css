@@ -1,16 +1,15 @@
 body {
   color: #333333;
   font-family: arial;
-  max-width: 650px;
   margin: 0 auto;
   padding: 0 16px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 header {
   margin-top: 16px;
   margin-bottom: 48px;
+  text-align: center;
 }
 h1 {
   font-size: 64px;
@@ -23,12 +22,17 @@ header a {
 }
 p {
   color: #333333;
+  text-align: center;
 }
 .portrait {
   width: 250px;
 }
 .main-content {
   flex-grow: 1;
+}
+form {
+  display: inline-block;
+  margin-left: 40%;
 }
 input {
   border: 1px solid #cccccc;

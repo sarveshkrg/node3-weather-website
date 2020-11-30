@@ -2,23 +2,57 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+
     <title>Weather</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/floating-labels.css" rel="stylesheet">
     <link rel="icon" href="/img/weather.png">
-    <link rel="stylesheet" href="/css/styles.css">
+    <!--<link rel="stylesheet" href="/css/styles.css">-->
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="main-content">
-        {{>header}}
-        <p>Use this site to get your weather</p>
-        <form>
-            <input placeholder="Location">
-            <button>Search</button>
-        </form>
-        <p id="message-1"></p>
-        <p id="message-2"></p>
-    </div>
-    {{>footer}}
+    <form class="form-signin">
+        <div class="text-center mb-4">
+            {{>header}}
+            <br><br><br>
+            <img class="mb-4" src="/img/weather.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Use this site to get your weather</h1>
+            <!--<p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, Firefox, and IE 10/11 (prefixed).</a></p>-->
+        </div>
+
+        <div class="form-label-group">
+            <input type="text" id="inputEmail" class="form-control" placeholder="Location" required autofocus>
+            <label for="inputEmail">Location</label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Search</button>
+        <p class="mt-5 mb-3 text-muted text-center font-weight-bold" id="message-1"></p>
+        <p class="mt-5 mb-3 text-muted text-center font-weight-bold" id="message-2"></p>
+        {{>footer}}
+    </form>
     <script src="/js/app.js"></script>
 </body>
 
