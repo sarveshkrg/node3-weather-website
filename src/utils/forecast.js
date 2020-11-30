@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
             callback("Unable to find Weather. Try another search.", undefined)
         }
         else{
-            callback(undefined, response.body.current.weather_descriptions[0]+": It is "+response.body.current.temperature+" degrees out. It feelslike "+response.body.current.feelslike+" degrees out.")
+            callback(undefined, response.body.current.weather_descriptions[0]+": It is "+response.body.current.temperature+" degrees out. It feelslike "+response.body.current.feelslike+" degrees out. Humidity is about "+response.body.current.humidity)
         }
     })
 }
